@@ -1,5 +1,10 @@
 const mysql = require("mysql2");
 
+    console.log("DB HOST:", process.env.DB_HOST);
+    console.log("DB PORT:", process.env.DB_PORT);
+    console.log("DB USER:", process.env.DB_USER);
+    console.log("DB NAME:", process.env.DB_NAME);  
+
 const db = mysql.createConnection({
     host: process.env.DB_HOST,
     port: process.env.DB_PORT,
