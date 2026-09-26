@@ -897,7 +897,7 @@ export default function ResumeBuilder() {
   const exportPdf = () => window.print();
   const saveResume = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/resume/save", {
+      const response = await fetch("https://resume-production-16ad.up.railway.app/api/resume/save", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -937,7 +937,7 @@ export default function ResumeBuilder() {
     try {
       const userId = localStorage.getItem("user_id");
       const response = await fetch(
-        `http://localhost:5000/api/resume/load/${userId}`
+        `https://resume-production-16ad.up.railway.app/api/resume/load/${userId}`
       );
 
       const data = await response.json();
@@ -1208,7 +1208,7 @@ export default function ResumeBuilder() {
     try {
       setLoginError("");
 
-      const response = await fetch("http://localhost:5000/api/auth/login", {
+      const response = await fetch("https://resume-production-16ad.up.railway.app/api/auth/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -1261,7 +1261,7 @@ export default function ResumeBuilder() {
     try {
       setRegisterError("");
 
-      const response = await fetch("http://localhost:5000/api/auth/register", {
+      const response = await fetch("https://resume-production-16ad.up.railway.app/api/auth/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
